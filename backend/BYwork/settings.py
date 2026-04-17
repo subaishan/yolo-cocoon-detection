@@ -70,7 +70,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.getenv('DB_NAME', 'bywork1'),
         'USER': os.getenv('DB_USER', 'testUser'),
-        'PASSWORD': os.getenv('DB_PASSWORD', '3774691Cjjdf.'),
+        'PASSWORD': os.getenv('DB_PASSWORD', '260417BYWork.'),
         'HOST': os.getenv('DB_HOST', '127.0.0.1'),
         'PORT': os.getenv('DB_PORT', '3306'),
         'OPTIONS': {

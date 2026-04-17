@@ -58,6 +58,8 @@ cocoon-detection/
 - Python >= 3.8
 - Node.js >= 16
 - npm 或 yarn
+- mysql
+- redis
 
 ### 环境依赖
 
@@ -111,6 +113,32 @@ python manage.py createsuperuser
 
 # 运行服务
 python manage.py runserver
+```
+
+数据库配置位于 `backend/BYwork/settings.py`，默认使用 MySQL：
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bywork1',
+        'USER': 'testUser',
+        'PASSWORD': '260417BYWork.',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
+}
+```
+
+Redis 配置位于 `backend/BYwork/settings.py`，默认使用本地 Redis：
+
+```python
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+    }
+}
 ```
 
 ### 前端安装
